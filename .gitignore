@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+#  执行文件与编译器
+*.exe
+.vscode
