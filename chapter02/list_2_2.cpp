@@ -22,7 +22,7 @@ void ListPrint(SqList &L){
     for(int i=0;i<L.length;i++){
         cout<<L.data[i]<<"\t";
     }
-    cout<<"the length of the list is: "<<L.length;
+    cout<<"\nthe length of the list is: "<<L.length;
 }
 
 void ListRevert(SqList &L){

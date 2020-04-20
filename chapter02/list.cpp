@@ -12,11 +12,6 @@ typedef struct{
     int length = 0; //顺序表的当前长度,初始化长度为0
 }SqList;
 
-//顺序插入元素至列表
-bool ListInsertByLast(SqList &L,ElemType e){
-    return ListInsert(L,L.length+1,e);
-}
-
 //插入操作 i是绝对位置，比如i为1，对应链表的位置时data[0]
 bool ListInsert(SqList &L,int i,ElemType e){
     if(i<1||i>L.length+1) //越界判断
@@ -28,6 +23,11 @@ bool ListInsert(SqList &L,int i,ElemType e){
     L.data[i-1]=e;
     L.length++;
     return true;
+}
+
+//顺序插入元素至列表
+bool ListInsertByLast(SqList &L,ElemType e){
+    return ListInsert(L,L.length+1,e);
 }
 
 //批量插入至list

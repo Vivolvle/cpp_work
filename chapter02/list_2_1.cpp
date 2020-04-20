@@ -22,7 +22,7 @@ void ListPrint(SqList &L){
     for(int i=0;i<L.length;i++){
         cout<<L.data[i]<<"\t";
     }
-    cout<<"the length of the list is: "<<L.length;
+    cout<<"\nthe length of the list is: "<<L.length;
 }
 ElemType DeleteMin(SqList &L){
     assert(L.length>0);//判断顺序表是否为空，为空则报错

@@ -31,6 +31,6 @@
 *.out
 *.app
 
-#  执行文件与编译器
+# vscode And executive files
 *.exe
 .vscode

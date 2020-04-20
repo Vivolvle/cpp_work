@@ -45,23 +45,9 @@ bool ListInsertByLast(SqList &L,ElemType e){
 
 //合并两个有序链表
 SqList MergeList(SqList &L,SqList &S){
+
     SqList list;
-    if (L.length==0&&S.length==0)
-        return list;
-    if (L.length==0)
-    {
-        //原样把S的复制给list即可
-        for (int i = 0; i < S.length; i++)
-            ListInsertByLast(list,S.data[i]);
-        return list;
-    }
-    if (S.length==0)
-    {
-        //原样把S的复制给list即可
-        for (int i = 0; i < L.length; i++)
-            ListInsertByLast(list,L.data[i]);
-        return list;
-    }
+    assert(L.length+S.length<=MaxSize);
     //两个顺序表都不为空，合并操作，也就是归并排序的下一步
     int i=0,j=0;
     while (i <L.length&&j<S.length)
